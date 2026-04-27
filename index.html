@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devolución de Saldo a Favor Renta DIAN — Guía paso a paso real (2026)</title>
+<meta name="description" content="Guía práctica para radicar la devolución del saldo a favor en Renta ante la DIAN sin que te inadmitan. Incluye los dos errores ocultos del portal MUISCA que nadie explica: el navegador y el año informado del Formato 1220.">
+<meta name="keywords" content="devolución saldo a favor renta DIAN, formato 1220, auto inadmisorio devolución, MUISCA anexar 1220, subsanar devolución DIAN, persona natural devolución renta">
+<meta name="author" content="Guía DIAN práctica">
+<meta property="og:title" content="Devolución Saldo a Favor Renta DIAN — La guía que SÍ funciona">
+<meta property="og:description" content="Cómo radicar tu devolución sin que te inadmitan. Los dos errores ocultos del portal MUISCA que ni la DIAN te dice.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_CO">
+<style>
+  :root {
+    --azul: #0a4d8c;
+    --azul-claro: #2b7bb9;
+    --verde: #2d8659;
+    --rojo: #c0392b;
+    --amarillo: #f39c12;
+    --gris-bg: #f5f7fa;
+    --gris-borde: #e1e5eb;
+    --texto: #1a2332;
+    --texto-secundario: #5a6577;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.65;
+    color: var(--texto);
+    background: #fff;
+    font-size: 17px;
+  }
+  .container { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+    color: white;
+    padding: 80px 20px 60px;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    font-weight: 800;
+  }
+  header .subtitle {
+    font-size: 1.15rem;
+    max-width: 640px;
+    margin: 0 auto 28px;
+    opacity: 0.95;
+  }
+  header .meta {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+
+  /* TOC */
+  nav.toc {
+    background: var(--gris-bg);
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 40px 0;
+  }
+  nav.toc h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--texto-secundario);
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+  nav.toc ol { padding-left: 22px; }
+  nav.toc li { margin: 6px 0; }
+  nav.toc a {
+    color: var(--azul);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  nav.toc a:hover { text-decoration: underline; }
+
+  /* Sections */
+  section { padding: 36px 0; border-bottom: 1px solid var(--gris-borde); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+    color: var(--azul);
+    line-height: 1.25;
+  }
+  h3 {
+    font-size: 1.2rem;
+    margin: 24px 0 12px;
+    color: var(--texto);
+  }
+  p { margin: 14px 0; }
+  ul, ol { margin: 14px 0 14px 24px; }
+  li { margin: 6px 0; }
+  strong { color: #000; }
+  code {
+    background: #f0f3f7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.92em;
+    font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+    color: var(--rojo);
+  }
+  pre {
+    background: #2b2f3a;
+    color: #e6edf3;
+    padding: 18px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.88em;
+    line-height: 1.5;
+    margin: 16px 0;
+  }
+  pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+  }
+
+  /* Callouts */
+  .callout {
+    border-left: 4px solid var(--azul);
+    background: #eef4fb;
+    padding: 18px 20px;
+    margin: 20px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .callout.warn {
+    border-left-color: var(--amarillo);
+    background: #fef6e7;
+  }
+  .callout.danger {
+    border-left-color: var(--rojo);
+    background: #fdecea;
+  }
+  .callout.success {
+    border-left-color: var(--verde);
+    background: #e8f5ee;
+  }
+  .callout strong { display: block; margin-bottom: 6px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.3px; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.94rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--gris-borde);
+    vertical-align: top;
+  }
+  th {
+    background: var(--gris-bg);
+    font-weight: 600;
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  /* Steps */
+  .paso {
+    background: var(--gris-bg);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin: 18px 0;
+    border-left: 4px solid var(--verde);
+  }
+  .paso .num {
+    display: inline-block;
+    background: var(--verde);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 700;
+    margin-right: 8px;
+  }
+  .paso h4 { display: inline; font-size: 1.05rem; }
+
+  /* Ad slot placeholder (visible solo cuando AdSense no carga) */
+  .ad-slot {
+    background: #fafbfc;
+    border: 1px dashed var(--gris-borde);
+    text-align: center;
+    padding: 24px;
+    margin: 32px 0;
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+
+  /* CTA */
+  .cta {
+    background: linear-gradient(135deg, var(--verde) 0%, #1d6b46 100%);
+    color: white;
+    padding: 32px 28px;
+    border-radius: 10px;
+    margin: 40px 0;
+    text-align: center;
+  }
+  .cta h3 { color: white; margin-bottom: 12px; }
+  .cta p { margin-bottom: 18px; opacity: 0.95; }
+  .cta a {
+    display: inline-block;
+    background: white;
+    color: var(--verde);
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  /* FAQ */
+  details {
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin: 10px 0;
+    background: white;
+  }
+  details[open] { background: var(--gris-bg); }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--azul);
+    list-style: none;
+    position: relative;
+    padding-right: 24px;
+  }
+  summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: var(--texto-secundario);
+  }
+  details[open] summary::after { content: "−"; }
+  details p, details ul { margin-top: 12px; }
+
+  /* Footer */
+  footer {
+    background: #1a2332;
+    color: #c1c8d4;
+    padding: 36px 20px;
+    text-align: center;
+    font-size: 0.88rem;
+    margin-top: 60px;
+  }
+  footer p { margin: 6px 0; }
+  footer a { color: #8fb8e0; }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    header { padding: 50px 20px 40px; }
+    header h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.4rem; }
+    .paso { padding: 16px 18px; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 8px 6px; }
+  }
+
+  /* Print friendly */
+  @media print {
+    header, footer, .ad-slot, .cta { background: none !important; color: black !important; }
+    nav.toc { page-break-after: always; }
+    section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Devolución de Saldo a Favor en Renta — DIAN</h1>
+    <p class="subtitle">La guía paso a paso que SÍ funciona en 2026. Incluye los dos errores ocultos del portal MUISCA que ni la DIAN te explica y que casi siempre causan inadmisión.</p>
+    <p class="meta">Última actualización: 26 de abril de 2026 · Basado en experiencia real de radicación exitosa</p>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- AD SLOT 1 — top of content -->
+<div class="ad-slot">
+  <!-- Aquí va el código de Google AdSense (responsive) -->
+  Espacio publicitario
+</div>
+
+<nav class="toc" aria-label="Tabla de contenidos">
+  <h3>Tabla de contenidos</h3>
+  <ol>
+    <li><a href="#para-quien">¿Para quién es esta guía?</a></li>
+    <li><a href="#errores-mortales">Los 2 errores que te van a inadmitir (y nadie te avisa)</a></li>
+    <li><a href="#requisitos">Documentos y formatos que necesitas</a></li>
+    <li><a href="#paso-a-paso">Paso a paso completo</a></li>
+    <li><a href="#errores-comunes">Errores comunes y cómo solucionarlos</a></li>
+    <li><a href="#plazos">Plazos legales clave</a></li>
+    <li><a href="#faq">Preguntas frecuentes</a></li>
+    <li><a href="#disclaimer">Aviso legal</a></li>
+  </ol>
+</nav>
+
+<section id="para-quien">
+  <h2>¿Para quién es esta guía?</h2>
+  <p>Esta guía es para <strong>personas naturales empleadas</strong> que tienen un saldo a favor en su declaración de Renta (Formulario 210) por <strong>retenciones en la fuente practicadas por el empleador</strong> y quieren que la DIAN les devuelva ese dinero a su cuenta bancaria.</p>
+  <p>El proceso se hace 100% en línea desde el portal <a href="https://muisca.dian.gov.co" target="_blank" rel="noopener">muisca.dian.gov.co</a>, sin necesidad de ir a una oficina. Pero el portal tiene varios "campos minados" no documentados que hacen que más del 60% de las solicitudes de personas naturales sean inadmitidas la primera vez.</p>
+
+  <div class="callout">
+    <strong>¿Qué es saldo a favor?</strong>
+    Es la diferencia positiva entre lo que te retuvieron en la fuente durante el año y el impuesto que realmente debías pagar según tu declaración. Si te retuvieron más de lo que debías, la DIAN te debe esa plata. Casillas clave del Formulario 210: <code>132</code> (retenciones del año), <code>131</code> (arrastre del año anterior), <code>137</code> (total saldo a favor).
+  </div>
+</section>
+
+<section id="errores-mortales">
+  <h2>Los 2 errores que te van a inadmitir (y nadie te avisa)</h2>
+  <p>Estos dos errores son la causa de la mayoría de los Autos Inadmisorios para personas naturales. No los vas a encontrar mencionados en el manual oficial de la DIAN. Léelos antes de hacer NADA.</p>
+
+  <div class="callout danger">
+    <strong>Error #1 — El navegador (Brave / Firefox con bloqueo)</strong>
+    <p>En la pantalla "Anexo de requisitos a asunto Devolución/Compensación", la columna "Consultar" del Formato 1220 muestra un botón con un ícono de imagen (<code>botnotallena.gif</code>). Si usas <strong>Brave con Shields activos, Firefox con uBlock Origin estricto, o cualquier bloqueador de scripts</strong>, esa imagen NO carga y el botón queda completamente invisible. Tú ves la celda vacía y crees que el sistema no te deja anexar el F1220 — pero el botón está ahí, solo invisible.</p>
+    <p><strong>Solución:</strong> usa <strong>Microsoft Edge o Google Chrome sin extensiones</strong> para todo el trámite. Si insistes en Brave, baja Shields para <code>dian.gov.co</code> (ícono del león en la barra de URL → desactivar).</p>
+  </div>
+
+  <div class="callout danger">
+    <strong>Error #2 — El doble significado del "Año" en el Formato 1220</strong>
+    <p>Cuando subes el F1220 al portal hay <strong>dos campos llamados "Año"</strong> y debes ponerles valores distintos:</p>
+    <table>
+      <tr>
+        <th>Campo</th><th>Dónde está</th><th>Qué valor poner</th>
+      </tr>
+      <tr>
+        <td><code>&lt;Ano&gt;</code> dentro del XML</td>
+        <td>Cabecera del XML que generas con el Prevalidador</td>
+        <td><strong>Año actual</strong> (ej. 2026)</td>
+      </tr>
+      <tr>
+        <td><code>FecInicial</code> / <code>FecFinal</code> dentro del XML</td>
+        <td>Cabecera del mismo XML</td>
+        <td><strong>Año gravable real</strong> (ej. 2024-01-01 / 2024-12-31)</td>
+      </tr>
+      <tr>
+        <td><strong>"Año Informado"</strong></td>
+        <td>Pantalla "Diligenciar Solicitud Envío de Archivos"</td>
+        <td><strong>Año gravable real</strong> (ej. 2024 si las retenciones son AG 2024)</td>
+      </tr>
+    </table>
+    <p><strong>Por qué importa:</strong> si en "Año Informado" pones el año actual (2026), MUISCA registra el F1220 con Año=2026/Período=1. La combinación Formato/Año/Período debe ser ÚNICA por expediente. Si tienes que anexar dos F1220 (uno por AG 2024 y otro por arrastre AG 2023) y ambos tienen Año Informado=2026, el sistema solo te deja anexar uno → el otro queda fuera → Auto Inadmisorio por "no se anexó la Relación de Retenciones del año XXXX".</p>
+    <p><strong>Solución:</strong> al diligenciar la solicitud de envío de archivos, pon "Año Informado = 2024" para el F1220 del AG 2024, y "Año Informado = 2023" para el F1220 del AG 2023. Aunque <code>&lt;Ano&gt;</code> interno del XML diga 2026, ese campo solo pasa la validación técnica del archivo — el portal NO se contradice.</p>
+  </div>
+</section>
+
+<!-- AD SLOT 2 — entre secciones -->
+<div class="ad-slot">Espacio publicitario</div>
+
+<section id="requisitos">
+  <h2>Documentos y formatos que necesitas</h2>
+  <p>Para una persona natural empleada (no responsable de IVA, no obligada a llevar contabilidad), el paquete de anexos es:</p>
+
+  <table>
+    <tr><th>Formato</th><th>Nombre</th><th>¿Aplica para ti?</th></tr>
+    <tr><td><strong>010</strong></td><td>Solicitud de Devolución y/o Compensación</td><td>✅ Sí (lo genera el portal)</td></tr>
+    <tr><td><strong>1220</strong></td><td>Relación de Retenciones a Título de Renta</td><td>✅ Sí — uno por cada año gravable involucrado (AG actual + arrastres si los hay)</td></tr>
+    <tr><td><strong>1668</strong></td><td>Constancia Titularidad Cuenta Bancaria</td><td>✅ Sí — más certificación bancaria PDF (sin clave, vigencia menor a 1 mes)</td></tr>
+    <tr><td>1336</td><td>Registro Documento Físico</td><td>❌ NO — solo si la declaración 210 NO está en el sistema DIAN (caso muy raro)</td></tr>
+    <tr><td>1384</td><td>Existencia y Representación Legal</td><td>❌ NO — solo persona jurídica</td></tr>
+    <tr><td>2613</td><td>Relación Costos, Gastos y Deducciones</td><td>❌ NO — solo si optaste por devolución automática (Resolución 117/2024) y cumples requisitos</td></tr>
+  </table>
+
+  <h3>Documentos físicos (PDF) a tener listos</h3>
+  <ul>
+    <li>RUT actualizado (no más de 1 año desde última actualización es ideal).</li>
+    <li>Declaración de Renta 210 del año gravable a devolver (la que está en DIAN).</li>
+    <li>Declaraciones 210 de años anteriores con saldos arrastrados (si aplica).</li>
+    <li>Certificación bancaria del titular — emitida en menos de 1 mes, sin clave.</li>
+    <li>Información Exógena descargada de Muisca para el(los) año(s) gravable(s) — para verificar que las retenciones que vas a reportar coincidan con lo que el agente retenedor le reportó a la DIAN.</li>
+  </ul>
+
+  <div class="callout warn">
+    <strong>Validación crítica de la razón social</strong>
+    <p>La razón social del agente retenedor en el F1220 debe coincidir <strong>carácter por carácter</strong> con la registrada en el RUT de ese tercero. La DIAN cruza esto. Si tu empleador es por ejemplo "TECH MAHINDRA COLOMBIA S. A. S" (con puntos), no escribas "S A S" sin puntos ni "S.A.S" sin espacios — es causal de inadmisión. <strong>La fuente más confiable</strong> para saber el formato exacto es el reporte de Información Exógena que descargas de Muisca: ahí aparece la razón social como la DIAN la tiene registrada.</p>
+  </div>
+</section>
+
+<section id="paso-a-paso">
+  <h2>Paso a paso completo</h2>
+
+  <div class="paso">
+    <h4><span class="num">1</span> Generar los XML del Formato 1220 con el Prevalidador</h4>
+    <p>Descarga el Prevalidador de Requisitos Saldo a Favor Renta (versión vigente — al 2026 es la 3.x) desde la página de la DIAN. Es un Excel con macros — necesita Excel real, no funciona en LibreOffice.</p>
+    <ul>
+      <li>Llena la hoja secundaria con los datos del agente retenedor (NIT, razón social EXACTA, base, valor retenido, concepto 24 = rentas de trabajo).</li>
+      <li>Llena la hoja principal con tus datos.</li>
+      <li>Genera el XML para cada año gravable involucrado.</li>
+    </ul>
+    <p>El XML generado debe verse así (ejemplo simplificado):</p>
+    <pre><code>&lt;mas&gt;
+ &lt;Cab&gt;
+  &lt;Ano&gt;2026&lt;/Ano&gt;          &lt;!-- AÑO ACTUAL --&gt;
+  &lt;Formato&gt;1220&lt;/Formato&gt;
+  &lt;Version&gt;7&lt;/Version&gt;
+  &lt;NumEnvio&gt;1&lt;/NumEnvio&gt;    &lt;!-- consecutivo, ver paso 2 --&gt;
+  &lt;FecInicial&gt;2024-01-01&lt;/FecInicial&gt;  &lt;!-- AÑO GRAVABLE --&gt;
+  &lt;FecFinal&gt;2024-12-31&lt;/FecFinal&gt;
+  &lt;ValorTotal&gt;1810000&lt;/ValorTotal&gt;
+ &lt;/Cab&gt;
+ &lt;ppal ...&gt;
+  &lt;sec raz="EMPLEADOR S. A. S" ... /&gt;
+ &lt;/ppal&gt;
+&lt;/mas&gt;</code></pre>
+  </div>
+
+  <div class="paso">
+    <h4><span class="num">2</span> Subir el XML a la Bandeja</h4>
+    <p>En MUISCA → menú izquierdo → "Presentación de Información por E..." → "Colocar Archivos en su Bandeja de Entrada". Busca formato 1220 versión 7. La pantalla te dirá el "próximo consecutivo" — tu XML debe tener ese número en <code>&lt;NumEnvio&gt;</code> y en el sufijo del nombre del archivo. Selecciona el XML, clic "Colocar", marca el checkbox, clic "Firma" y autenticate.</p>
+  </div>
+
+  <div class="paso">
+    <h4><span class="num">3</span> Diligenciar la Solicitud de Envío de Archivos</h4>
+    <p>"Presentación de Información por E..." → "Diligenciar Solicitud Envío de Archivos". Aquí está el campo crítico:</p>
+    <ul>
+      <li>Año Informado = <strong>año gravable real</strong> (no el año actual).</li>
+      <li>Período Informado = 01 ANUAL.</li>
+      <li>Nombre del archivo = el nombre exacto que está en la bandeja.</li>
+      <li>Cantidad de archivos = 1, Total registros = 1.</li>
+    </ul>
+    <p>Clic en Solicitar → SÍ a la confirmación → Firma. Anota el número de solicitud que te dé. Repite para cada año gravable.</p>
+  </div>
+
+  <div class="paso">
+    <h4><span class="num">4</span> Verificar que la solicitud quede en "Solicitud exitosa"</h4>
+    <p>"Consultar Envíos de Solicitudes" → filtra por formato 1220 v7 → buscar. Cada envío debe aparecer en estado "Solicitud exitosa". Si dice "Por firmar" o cualquier otro estado, no avances.</p>
+  </div>
+
+  <div class="paso">
+    <h4><span class="num">5</span> Crear la Solicitud de Devolución (Formato 010)</h4>
+    <p>"Procedimiento de Devolución/Compensación" → "1. Solicitud Devolución/Compensación". Concepto: Saldos a favor. Tipo Obligación: Impuesto sobre la renta. Continuar.</p>
+    <ul>
+      <li>Modo de diligenciamiento: Crear solicitud nueva.</li>
+      <li>¿Tiene garantía? No (a menos que aplique).</li>
+      <li>Obligaciones Origen: clic "Seleccionar Saldo" — el sistema lista tu 210 con saldo a favor disponible. Selecciónala.</li>
+      <li>Forma de pago: Giro a cuenta. Selecciona tu banco y número de cuenta.</li>
+      <li>Guardar → Formalizar documento. Anota el número de Solicitud y de Expediente.</li>
+    </ul>
+  </div>
+
+  <div class="paso">
+    <h4><span class="num">6</span> Anexar los Formatos al expediente</h4>
+    <p>Después de formalizar, llegas a la pantalla "Anexo de requisitos a asunto Devolución/Compensación".</p>
+    <ol>
+      <li><strong>Formato 1220:</strong> Clic en el ícono "Consultar" de la fila del 1220 (recuerda: si usas Brave puede no verse — usa Edge). Se abre ventana "Documentos en definitivo" con los XML que ya enviaste. Selecciona el del primer año, clic Anexar. Repite para el segundo año.</li>
+      <li><strong>Formato 1668:</strong> Clic en el ícono "Nuevo" → llena la fecha de expedición de la certificación (debe ser menos de 1 mes), banco, número y tipo de cuenta. Guardar → Presentar → SÍ a anexar. Luego clic en "Asociar" en la fila del 1668 anexado y sube el PDF de la certificación bancaria (sin clave).</li>
+    </ol>
+    <p>Verifica que en "Documentos anexados" aparezcan: F010, F1220 (uno por cada año gravable, con la columna "Año gravable" mostrando el año correcto), F1668 con su PDF asociado.</p>
+  </div>
+
+  <div class="paso">
+    <h4><span class="num">7</span> Radicar</h4>
+    <p>Clic en el botón <strong>Radicar</strong> abajo a la derecha → firma electrónica. Si todo está bien, sale el mensaje: "La solicitud de devolución y/o compensación con Número XXX y fecha de radicación ... ha sido presentada satisfactoriamente". Guarda el acuse PDF.</p>
+  </div>
+
+  <div class="callout success">
+    <strong>¡Listo!</strong>
+    A partir de la fecha de radicación, la DIAN tiene 50 días hábiles para resolver (artículo 855 del Estatuto Tributario). Activa "Alarmas" en el portal y revisa diariamente el correo del RUT por notificaciones.
+  </div>
+</section>
+
+<!-- AD SLOT 3 -->
+<div class="ad-slot">Espacio publicitario</div>
+
+<section id="errores-comunes">
+  <h2>Errores comunes y cómo solucionarlos</h2>
+
+  <h3>"El año del envío del archivo es diferente del año actual"</h3>
+  <p>El <code>&lt;Ano&gt;</code> del XML no coincide con el año calendario actual. Edita el XML y pon <code>&lt;Ano&gt;2026&lt;/Ano&gt;</code> (o el año en que estás radicando). NO confundir con FecInicial/FecFinal, que sí van con el año gravable.</p>
+
+  <h3>"El consecutivo del nombre del archivo no es válido, debe ser 0000000X"</h3>
+  <p>El portal lleva contador de consecutivos por contribuyente. Una vez quemas un número, ya no se puede reusar. Genera un XML nuevo con el siguiente consecutivo (cambia <code>&lt;NumEnvio&gt;</code> y el sufijo del nombre del archivo).</p>
+
+  <h3>"Ya existe una solicitud presentada para este Formato, Año y Período de Vigencia"</h3>
+  <p>No es error — es solo aviso de que vas a crear otra solicitud con la misma combinación. Clic SÍ y continúa. Cada solicitud queda con su propio consecutivo único.</p>
+
+  <h3>"Un documento requisito del mismo formato, el mismo año y periodo... ya ha sido anexado al asunto"</h3>
+  <p>Causado por el Error #2 (todos los F1220 tienen Año Informado igual). Solución: re-cargar los F1220 con Año Informado = año gravable real (uno por año), o eliminar el F1220 ya anexado y poner el correcto.</p>
+
+  <h3>"La declaración objeto de devolución existe en la DIAN, por lo tanto no debe anexar el documento de Registro Ingreso de Documento Físico Allegado por el Contribuyente formato 1336"</h3>
+  <p>NO diligencies el F1336 si tu 210 ya está presentada y figura en el sistema DIAN (que es el caso del 99% de personas naturales). Sáltatelo.</p>
+
+  <h3>El botón "Consultar" del 1220 no se ve en la pantalla de Anexos</h3>
+  <p>Es el Error #1. Cambia a Microsoft Edge o Chrome. Como workaround también puedes hacer clic ciego en la celda vacía (busca el cursor que cambia a manito), o ejecutar el onclick desde la consola DevTools (F12).</p>
+
+  <h3>Error de sesión cruzada / 404 al pasar entre módulos</h3>
+  <p>MUISCA tiene problemas cuando saltas entre <code>muisca.dian.gov.co</code> y <code>devolucion.dian.gov.co</code>. Cierra sesión, cierra todas las pestañas, abre nueva, vuelve a entrar.</p>
+</section>
+
+<section id="plazos">
+  <h2>Plazos legales clave</h2>
+  <table>
+    <tr><th>Hito</th><th>Plazo</th><th>Norma</th></tr>
+    <tr><td>Plazo para solicitar la devolución</td><td>2 años desde el vencimiento del plazo para declarar</td><td>Art. 854 E.T.</td></tr>
+    <tr><td>Plazo DIAN para resolver (devolución ordinaria)</td><td>50 días hábiles desde radicación</td><td>Art. 855 E.T.</td></tr>
+    <tr><td>Plazo DIAN para resolver (devolución automática Res. 117/2024)</td><td>15 días hábiles</td><td>Parág. 5 art. 855 E.T.</td></tr>
+    <tr><td>Plazo para subsanar un Auto Inadmisorio</td><td>1 mes desde notificación</td><td>Parág. 1° art. 857 E.T.</td></tr>
+  </table>
+  <div class="callout warn">
+    <strong>Importante</strong>
+    Si te inadmiten y NO subsanas dentro del mes, pierdes la oportunidad de pedir devolución para ese año, aunque el plazo de 2 años del art. 854 todavía esté vigente. El reloj de subsanación empieza el día de la notificación electrónica del Auto al correo del RUT.
+  </div>
+</section>
+
+<section id="faq">
+  <h2>Preguntas frecuentes</h2>
+
+  <details>
+    <summary>¿Necesito un contador para hacer este trámite?</summary>
+    <p>Legalmente NO si eres persona natural no obligada a llevar contabilidad. Esta guía te permite hacerlo solo. Sin embargo, si el saldo es alto (varios millones), tienes situaciones especiales (ingresos en el exterior, herencias, ECE, etc.) o no te sientes cómodo con el portal, vale la pena pagar un contador.</p>
+  </details>
+
+  <details>
+    <summary>¿Cuánto se demora la DIAN en pagar?</summary>
+    <p>Por ley, 50 días hábiles desde la radicación si admiten la solicitud (≈ 2.5 meses). En la práctica suele ser entre 45 y 70 días hábiles. La devolución llega como giro a la cuenta bancaria que registraste en el F1668.</p>
+  </details>
+
+  <details>
+    <summary>¿Qué pasa si mi declaración tiene un saldo arrastrado de años anteriores?</summary>
+    <p>Necesitas presentar UN F1220 por cada año gravable que esté contribuyendo al saldo. Por ejemplo, si tu casilla 132 (retenciones del año actual) es $1.810.000 y tu casilla 131 (arrastre del año anterior) es $804.000, debes presentar dos F1220 — uno con las retenciones del año actual y otro con las retenciones del año cuyo arrastre estás reclamando.</p>
+  </details>
+
+  <details>
+    <summary>¿Por qué la DIAN me pide la "Relación de Retenciones que originaron el saldo a favor" si esa información ya está en su Información Exógena?</summary>
+    <p>Buena pregunta. Es así por norma — la solicitud de devolución es declarativa y el contribuyente debe aportar formalmente la relación, aunque la DIAN ya tenga el dato. La exógena le sirve a la DIAN para CRUZAR y verificar lo que tú reportas. Si los valores difieren, te inadmite.</p>
+  </details>
+
+  <details>
+    <summary>¿Mi caso califica para devolución automática (15 días hábiles)?</summary>
+    <p>La Resolución 117 de 2024 estableció devolución automática para personas naturales que cumplan TODAS estas condiciones:</p>
+    <ul>
+      <li>No tener obligaciones pendientes con la DIAN.</li>
+      <li>No registrar ingresos por dividendos ni ganancias ocasionales.</li>
+      <li>No usar descuentos tributarios ni compensaciones de pérdidas.</li>
+      <li>El saldo a favor NO debe exceder 40 UVT (≈ $1.882.600 para 2024).</li>
+      <li>El saldo NO debe ser producto de imputaciones de períodos anteriores (es decir, casilla 131 = 0).</li>
+      <li>Haber optado expresamente por la devolución automática al presentar la 210.</li>
+    </ul>
+    <p>Si fallas en cualquiera de las condiciones, vas por la vía ordinaria (50 días hábiles).</p>
+  </details>
+
+  <details>
+    <summary>¿Qué pasa si el agente retenedor (mi empleador) no le reportó las retenciones a la DIAN?</summary>
+    <p>Es un problema serio. La DIAN va a inadmitir tu solicitud porque al cruzar tu F1220 con la Información Exógena del tercero no encontrará coincidencia. Tienes que hablar con tu empleador para que rectifique su exógena, o aportar el certificado de ingresos y retenciones (Form 220) firmado por ellos como prueba.</p>
+  </details>
+
+  <details>
+    <summary>¿La DIAN me puede hacer auditoría por pedir devolución?</summary>
+    <p>Sí — al solicitar devolución estás disparando la "interrupción de la firmeza" de tu declaración. Esto significa que la DIAN tiene 3 años (en lugar del plazo normal de firmeza) para revisarte. Si tu declaración está bien hecha y sustentada, no tienes nada que temer.</p>
+  </details>
+
+  <details>
+    <summary>¿Y si me inadmiten otra vez después de subsanar?</summary>
+    <p>Si la segunda vez también te inadmiten o rechazan en definitiva, queda la vía contenciosa administrativa (demanda de nulidad y restablecimiento del derecho ante el Tribunal Administrativo). Ya necesitas abogado tributarista.</p>
+  </details>
+</section>
+
+<div class="cta">
+  <h3>¿Necesitas ayuda personalizada?</h3>
+  <p>Si después de leer esta guía sientes que es demasiado o tu caso es especial, podemos revisarlo o radicarlo por ti. Escríbenos para una valoración gratuita.</p>
+  <a href="mailto:contacto@example.com">Pedir ayuda</a>
+</div>
+
+<section id="disclaimer">
+  <h2>Aviso legal</h2>
+  <p>Esta guía es <strong>información de orientación general</strong>, no constituye asesoría tributaria ni legal. La normativa y el portal MUISCA cambian con frecuencia; lo descrito aquí refleja la experiencia de radicación a abril de 2026. Para tu caso particular, consulta a un contador público o a un abogado tributarista.</p>
+  <p>Esta guía no es producida por ni está afiliada a la Dirección de Impuestos y Aduanas Nacionales (DIAN). Las marcas y referencias a "DIAN" y "MUISCA" se usan únicamente con fines descriptivos.</p>
+  <p>Los autores no se hacen responsables por inadmisiones, rechazos o sanciones que resulten de la aplicación de esta guía.</p>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p><strong>Guía DIAN Práctica</strong> — Devolución de saldo a favor en Renta</p>
+    <p>Hecho con cariño para evitarle a otros las trampas que vivimos nosotros · 2026</p>
+    <p>Esta página es independiente y no oficial. Fuente oficial: <a href="https://www.dian.gov.co" target="_blank" rel="noopener">dian.gov.co</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
